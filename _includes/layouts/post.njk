@@ -15,17 +15,22 @@ templateClass: tmpl-post
 {%- if recommended %}
 
 {% set recommendedPosts = collections.posts | postsBySlug(recommended) %}
+
+{%- if recommendedPosts %}
+
+<h2>Recommended posts</h2>
+
 <ul>
-  {%- if recommendedPosts %}
 
   {%- for recommendedPost in recommendedPosts -%}
   
-  <li>Recommended: <a href="{{ recommendedPost.url | url }}">{{ recommendedPost.data.title }}</a></li>
+  <li><a href="{{ recommendedPost.url | url }}">{{ recommendedPost.data.title }}</a></li>
   
   {%- endfor %}
   
-  {%- endif %}
 </ul>
+
+{%- endif %}
 
 {%- endif %}
 
