@@ -22,7 +22,7 @@ These builders are amazing—try them out to get your own Eleventy site in a few
 ### 1. Clone this Repository
 
 ```
-git clone https://github.com/11ty/eleventy-base-blog.git my-blog-name
+git clone https://github.com/SenthilUmapathy79/eleventy-base-blog.git my-blog-name
 ```
 
 
