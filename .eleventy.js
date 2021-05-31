@@ -46,6 +46,11 @@ module.exports = function(eleventyConfig) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   })
 
+  eleventyConfig.addFilter("postsBySlug", (posts, slugs) => {
+    return (posts || []).filter(post => slugs.includes(post.data.myslug));
+  })
+    
+  
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
